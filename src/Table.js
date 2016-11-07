@@ -3,8 +3,6 @@ import Tablehead from './Tablehead';
 import Tablerow from './Tablerow';
 import 'pure-css';
 
-
-
 export default class Table extends Component {
   constructor(props) {
     super(props)
@@ -27,8 +25,7 @@ export default class Table extends Component {
     this.setState({
       data: this.state.data.sort(
         (a,b) => parseInt(a[attribute], 10) > parseInt(b[attribute], 10) ? -1 : 1
-      )
-    })
+    )})
   }
 
   render() {
@@ -39,6 +36,7 @@ export default class Table extends Component {
         username={row.username}
         alltime={row.alltime}
         recent={row.recent}
+        className={index % 2 === 0 ? 'pure-table-odd' : ''}
       />)
 
     return (

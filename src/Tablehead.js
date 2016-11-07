@@ -7,8 +7,8 @@ export default class Tablehead extends Component {
         <tr>
           <th>#</th>
           <th>Username</th>
-          <th onClick={this.props.onChange.bind(this, 'alltime')}>All-time Score</th>
-          <th onClick={this.props.onChange.bind(this, 'recent')}>Last 30 days</th>
+          <th className="clickable" onClick={this.props.onChange.bind(this, 'alltime')}>All-time Score</th>
+          <th className="clickable" onClick={this.props.onChange.bind(this, 'recent')}>Last 30 days</th>
         </tr>
       </thead>
     )
