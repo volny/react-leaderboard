@@ -6,9 +6,9 @@ export default class Tablehead extends Component {
       <thead>
         <tr>
           <th>#</th>
-          <th>Make</th>
-          <th>Model</th>
-          <th>Year</th>
+          <th>Username</th>
+          <th>All-time Score</th>
+          <th>Last 30 days</th>
         </tr>
       </thead>
     )
