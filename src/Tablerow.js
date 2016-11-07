@@ -5,9 +5,9 @@ export default class Tablerow extends Component {
     return (
       <tr>
         <td>{this.props.position}</td>
-        <td>Honda</td>
-        <td>Accord</td>
-        <td>2009</td>
+        <td>{this.props.username}</td>
+        <td>{this.props.alltime}</td>
+        <td>{this.props.recent}</td>
       </tr>
     )
   }

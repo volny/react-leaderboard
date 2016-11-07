@@ -26,7 +26,11 @@ export default class Table extends Component {
   render() {
     const rows = this.state.data.map((row, index) =>
       <Tablerow
+        key={row.username}
         position={index + 1}
+        username={row.username}
+        alltime={row.alltime}
+        recent={row.recent}
       />)
 
     return (
