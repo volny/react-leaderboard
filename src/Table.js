@@ -12,6 +12,7 @@ export default class Table extends Component {
       data: []
     }
     this.componentDidMount = this.componentDidMount.bind(this)
+    this.handleSort = this.handleSort.bind(this)
   }
 
   componentDidMount() {
@@ -22,6 +23,13 @@ export default class Table extends Component {
     }))
   }
 
+  handleSort(attribute) {
+    this.setState({
+      data: this.state.data.sort(
+        (a,b) => parseInt(a[attribute], 10) > parseInt(b[attribute], 10) ? -1 : 1
+      )
+    })
+  }
 
   render() {
     const rows = this.state.data.map((row, index) =>
@@ -35,7 +43,7 @@ export default class Table extends Component {
 
     return (
       <table className="pure-table">
-        <Tablehead />
+        <Tablehead onChange={this.handleSort} />
         <tbody>
           { rows }
         </tbody>
